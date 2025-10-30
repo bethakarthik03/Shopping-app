@@ -1,0 +1,251 @@
+import React from 'react'
+import { useState } from 'react';
+import './home.css'
+import {FaSearch,FaTimes,FaBars, FaHeart, FaShoppingBag} from 'react-icons/fa'
+import { useAuth } from './Authcontent';
+import { useNavigate } from "react-router-dom";
+import { Link } from 'react-router-dom';
+import logo from '../Assets/Nykaalogo.png'
+import fashion from '../Assets/Nykaafashion.png'
+import westernWear from '../Assets/westernwear.jpeg'
+import iWear from '../Assets/indianwear.jpeg'
+import men from '../Assets/men.jpeg'
+import kids from '../Assets/kids.jpeg'
+import bags from '../Assets/bags.jpeg'
+import shoes from '../Assets/shoes.jpeg'
+import styli from '../Assets/stylimendark.jpeg'
+import campus from '../Assets/campussutra.jpeg'
+import garge from '../Assets/gargego.jpeg'
+import puma from '../Assets/puma.jpeg'
+import mabli from '../Assets/Mabish.webp'
+import peach from '../Assets/peachself.jpeg'
+import stylum from '../Assets/stylum.webp'
+import chaabra from '../Assets/chaabra.webp'
+import stylobug from '../Assets/Stylobug.jpeg'
+import aj from '../Assets/AjDezines.jpeg'
+import bitiya from '../Assets/bitiyabhama.jpeg'
+import kisah from '../Assets/Kisah.jpeg'
+import { useWishlist } from './WishlistContext';
+import { useCartlist } from './CartlistContext';
+const Home = () => {
+  const navigate = useNavigate();
+  const { isAuthenticated, login, logout } = useAuth();
+   const [menuOpen, setMenuOpen] = useState(false);
+   const { wishlistItems } = useWishlist();
+   const wishlistCount = wishlistItems.length;
+   const {cartlistItems} =useCartlist();
+   const cartlistCount=cartlistItems.length;
+   const scrollToSection = (sectionId) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+  const handleLogout = () => {
+    logout();
+    navigate("/");
+  };
+
+  const handleLogin = () => {
+    login()
+    navigate("/");
+  };
+  
+
+  return (
+    <div>
+        <div className="navbar" >  
+            <div className="logo">
+                <img src={logo} alt="logo" />
+             </div> 
+            <nav >
+                <button className="hamburger-button" onClick={() => setMenuOpen(!menuOpen)} >
+            {menuOpen ? <FaTimes /> : <FaBars />}
+          </button>
+            <div className={`side-menu ${menuOpen ? 'open' : ''}`}>
+            <div className="menu-item" onClick={() => { scrollToSection('mens-section'); setMenuOpen(false); }}>Men</div>
+            <div className="menu-item" onClick={() => { scrollToSection('women-section'); setMenuOpen(false); }}>Women</div>
+            <div className="menu-item" onClick={() => { scrollToSection('kids-section'); setMenuOpen(false); }}>Kids</div>
+          </div>
+          {menuOpen && <div className="overlay" onClick={() => setMenuOpen(false)}></div>}
+            </nav>
+            <div className="nav-search">
+                <input type="text" placeholder='search products...' />
+                <FaSearch className='search-icon'/>
+            </div>
+            
+            <div className="nav-buttons">
+            {isAuthenticated ? (
+            <>
+                <div className="icon-btn" onClick={() => navigate("/wishlist")}>
+                <FaHeart className="icon" />
+                <span className="badge">{wishlistCount}</span>
+                </div>
+                <div className="icon-btn" onClick={() => navigate("/cart")}>
+                <FaShoppingBag className="icon" />
+                <span className="badge">{cartlistCount}</span>
+                </div>
+                <button onClick={handleLogout} className="logout-btn">Logout</button>
+            </>
+            ) : (
+            <>
+                <button onClick={handleLogin} className="login-btn">Login</button>
+                <button onClick={() => navigate("/signup")} className="signup-btn">SignUp</button>
+            </>
+        )}
+        </div>
+    </div>
+        <div className="fashion">
+            <img src={fashion} alt="" />
+        </div>
+        <div className="row">
+            <div className="col-3">
+                <img src={westernWear} alt="" />
+                <p>WesternWear</p>
+            </div>
+            <div className="col-3">
+                <img src={iWear} alt="" />
+                <p>IndianWear</p>
+            </div>
+            <div className="col-3">
+                <img src={men} alt="" />
+                <p>Men</p>
+            </div>
+            <div className="col-3">
+                <img src={kids} alt=""  />
+                <p>Kids</p>
+            </div>
+            <div className="col-3">
+                <img src={bags} alt="" />
+                <p>Bags</p>
+            </div>
+            <div className="col-3">
+                <img src={shoes} alt="" />
+                <p>Shoes</p>
+            </div>
+        </div>
+        <section id='mens-section' className='mens-section'>
+        <div className="container">
+            <h1>Men's Collection</h1>
+            <div className="row1">
+                <Link to='/styli' style={{textDecoration:'none'}}><div className="col-4">
+                    <img src={styli} className='img' alt="" />
+                    <h4>styli</h4>
+                    <p>Men Dark Blue Ballon Fit Dark
+                    <br/>
+                    <br/>
+                    <span>₹1,440 &nbsp; <del>₹1,999</del></span></p>
+                </div></Link>
+                <Link to='/campus' style={{textDecoration:'none'}}><div className="col-4">
+                    <img className='img' src={campus} alt="" />
+                    <h4>campus sutra    </h4>
+                    <p>Men Black Solid Casual Shirt
+                    <br/>
+                    <br/>
+                    <span>₹608 &nbsp; <del>₹1,899</del></span></p>
+                </div></Link>
+                <Link to='/garage' style={{textDecoration:'none'}}><div className="col-4">
+                    <img className='img' src={garge} alt="" />
+                    <h4>The Indian garage go</h4>
+                    <p>Men Slim Fit Multi Striped Full Shirt
+                    <br/>
+                    <br/>
+                    <span>₹753 &nbsp; <del>₹1,749</del></span></p>
+                </div></Link>
+               <Link to='/puma' style={{textDecoration:'none'}}> <div className="col-4">
+                    <img className='img' src={puma} alt="" />
+                    <h4>Puma</h4>
+                    <p>Smashic Unisex White Sneakers
+                    <br/>
+                    <br/>
+                    <span>₹1,800 &nbsp; <del>₹4,499</del></span></p>
+                </div></Link>
+                
+            </div>
+        </div>
+        </section>
+        <section id='women-section' className='women-section'>
+        <div className="container ">
+            <h1>Women's Collection</h1>
+            <div className="row1">
+                <Link to='/mabish' style={{textDecoration:'none'}}><div className="col-4">
+                    <img src={mabli} className='img' alt="" />
+                    <h4>&nbsp;&nbsp;Mabish By Sonal </h4>
+                    <p>Maroon Printed Crop Top
+                    <br/>
+                    <br/>
+                    <span>₹1,976 &nbsp; <del>₹5,199</del></span></p>
+                </div></Link>
+                <Link to='/libas' style={{textDecoration:'none'}}><div className="col-4">
+                    <img className='img' src={peach} alt="" />
+                    <h4>Libas</h4>
+                    <p>Embroidered Peach Kurta and Pant
+                    <br/>
+                    <br/>
+                    <span>₹4,880 &nbsp; <del>₹7,999</del></span></p>
+                </div></Link>
+                <Link to='/stylum' style={{textDecoration:'none'}}><div className="col-4">
+                    <img className='img' src={stylum} alt="" />
+                    <h4>Stylum</h4>
+                    <p>Blue Ajrakh Printed A-Line Kurtha
+                    <br/>
+                    <br/>
+                    <span>₹1,334 &nbsp; <del>₹4,599</del></span></p>
+                </div></Link>
+                <Link to='/chaabra' style={{textDecoration:'none'}}><div className="col-4">
+                    <img className='img' src={chaabra} alt="" />
+                    <h4>Chhabra 555</h4>
+                    <p>Cream Embroidered Flared Crop Top
+                    <br/>
+                    <br/>
+                    <span>₹3,920 &nbsp; <del>₹11,200</del></span></p>
+                </div></Link>
+            </div>
+        </div>
+        </section>
+        <section id='kids-section' className='kids-section'>
+        <div className="container container-kid">
+            <h1>Kid's Collection</h1>
+            <div className="row1">
+                <Link to='/mabish' style={{textDecoration:'none'}}><div className="col-4">
+                    <img src={stylobug} className='img' alt="" />
+                    <h4>Stylo Bug</h4>
+                    <p>Girls kurta & Pant Yellow
+                    <br/>
+                    <br/>
+                    <span>₹1,440 &nbsp; <del>₹3,599</del></span></p>
+                </div></Link>
+                <Link to='/mabish' style={{textDecoration:'none'}}><div className="col-4">
+                    <img className='img' src={aj} alt="" />
+                    <h4>AJ Dezines</h4>
+                    <p>Foil Printed Sleeveless Kurta
+                    <br/>
+                    <br/>
+                    <span>₹1,800 &nbsp; <del>₹3,999</del></span></p>
+                </div></Link>
+                <Link to='/mabish' style={{textDecoration:'none'}}><div className="col-4">
+                    <img className='img' src={bitiya} alt="" />
+                    <h4>Bitiya By Bhama</h4>
+                    <p>Girls Ethnic Yellow Floral Kurta
+                    <br/>
+                    <br/>
+                    <span>₹1,350 &nbsp; <del>₹4,499</del></span></p>
+                </div></Link>
+                <Link to='/mabish' style={{textDecoration:'none'}}><div className="col-4">
+                    <img className='img' src={kisah} alt="" />
+                    <h4>Kisah</h4>
+                    <p>Cream Floral Printed Nehru Jacket
+                    <br/>
+                    <br/>
+                    <span>₹1,499 &nbsp; <del>₹3,399</del></span></p>
+                </div></Link>
+            </div>
+        </div>
+        </section>
+    </div>
+    
+    
+  )
+}
+
+export default Home
