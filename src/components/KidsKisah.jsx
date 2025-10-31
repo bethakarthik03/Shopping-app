@@ -1,28 +1,28 @@
 import React from 'react';
 import ProductPage from './ProductPage';
-import campus from '../Assets/campussutra.jpeg';
-import campus1 from '../Assets/campus1.jpeg';
-import campus2 from '../Assets/campus2.jpeg';
-import campus3 from '../Assets/campus3.jpeg';
+import kisah from '../Assets/Kisah.jpeg';
+import kisah1 from '../Assets/kisah1.jpeg';
+import kisah2 from '../Assets/kisah2.jpeg';
+import kisah3 from '../Assets/kisah3.jpeg';
 
-const KidsCampus = () => {
+const KidsKisah = () => {
   const product = {
-    id: 12,
-    name: "Kids Black Solid Casual Shirt",
-    img: campus,
+    id: 11,
+    name: "Kids Kisah Outfit",
+    img: kisah,
     price: "₹1,235"
   };
 
-  const thumbnails = [campus, campus1, campus2, campus3];
+  const thumbnails = [kisah, kisah1, kisah2, kisah3];
   const sizes = ['2-3Y', '4-5Y', '6-7Y', '8-9Y', '10-11Y'];
 
   return (
     <ProductPage
       product={product}
-      mainImage={campus}
+      mainImage={kisah}
       thumbnails={thumbnails}
       tag="BestSeller"
-      title="Kids Black Solid Casual Shirt"
+      title="Kids Kisah Outfit"
       rating="3.4"
       reviews="Based on 25 ratings"
       price="₹1,235"
@@ -32,4 +32,4 @@ const KidsCampus = () => {
   );
 };
 
-export default KidsCampus;
+export default KidsKisah;

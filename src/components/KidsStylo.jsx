@@ -1,35 +1,35 @@
 import React from 'react';
 import ProductPage from './ProductPage';
-import styli from '../Assets/stylimendark.jpeg';
-import thumb1 from '../Assets/thumb1.jpeg';
-import thumb2 from '../Assets/thumb2.jpeg';
-import thumb3 from '../Assets/thumb3.jpeg';
+import stylo from '../Assets/Stylobug.jpeg';
+import stylo1 from '../Assets/stylo1.jpeg';
+import stylo2 from '../Assets/stylo2.jpeg';
+import stylo3 from '../Assets/stylo3.jpeg';
 
-const KidsStyli = () => {
+const KidsStylo = () => {
   const product = {
     id: 9,
-    name: "Kids Dark Blue Ballon Fit Dark Wash Denim",
-    img: styli,
-    price: "₹1,440"
+    name: "Kids Stylo Outfit",
+    img: stylo,
+    price: "₹1,235"
   };
 
-  const thumbnails = [styli, thumb1, thumb2, thumb3];
+  const thumbnails = [stylo, stylo1, stylo2, stylo3];
   const sizes = ['2-3Y', '4-5Y', '6-7Y', '8-9Y', '10-11Y'];
 
   return (
     <ProductPage
       product={product}
-      mainImage={styli}
+      mainImage={stylo}
       thumbnails={thumbnails}
       tag="BestSeller"
-      title="Kids Dark Blue Ballon Fit Dark Wash Denim"
-      rating="3.6"
+      title="Kids Stylo Outfit"
+      rating="3.4"
       reviews="Based on 25 ratings"
-      price="₹1,440"
-      discount="28% Off"
+      price="₹1,235"
+      discount="35% Off"
       sizes={sizes}
     />
   );
 };
 
-export default KidsStyli;
+export default KidsStylo;

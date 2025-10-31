@@ -1,28 +1,28 @@
 import React from 'react';
 import ProductPage from './ProductPage';
-import garage from '../Assets/gargego.jpeg';
-import garage1 from '../Assets/garage1.jpeg';
-import garage2 from '../Assets/garage2.jpeg';
-import garage3 from '../Assets/garage3.jpeg';
+import bitiya from '../Assets/bitiyabhama.jpeg';
+import bitiya1 from '../Assets/bitiya1.jpeg';
+import bitiya2 from '../Assets/bitiya2.jpeg';
+import bitiya3 from '../Assets/bitiya3.jpeg';
 
-const KidsGarage = () => {
+const KidsBitiya = () => {
   const product = {
-    id: 11,
-    name: "Kids Slim Fit Multi Striped Full Sleeves Cutaway Collar Casual Shirt - White",
-    img: garage,
+    id: 10,
+    name: "Kids Bitiya Bhama Outfit",
+    img: bitiya,
     price: "₹613"
   };
 
-  const thumbnails = [garage, garage1, garage2, garage3];
+  const thumbnails = [bitiya, bitiya1, bitiya2, bitiya3];
   const sizes = ['2-3Y', '4-5Y', '6-7Y', '8-9Y', '10-11Y'];
 
   return (
     <ProductPage
       product={product}
-      mainImage={garage}
+      mainImage={bitiya}
       thumbnails={thumbnails}
       tag="BestSeller"
-      title="Kids Slim Fit Multi Striped Full Sleeves Cutaway Collar Casual Shirt - White"
+      title="Kids Bitiya Bhama Outfit"
       rating="3.8"
       reviews="Based on 63 ratings"
       price="₹613"
@@ -32,4 +32,4 @@ const KidsGarage = () => {
   );
 };
 
-export default KidsGarage;
+export default KidsBitiya;

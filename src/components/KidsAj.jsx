@@ -1,28 +1,28 @@
 import React from 'react';
 import ProductPage from './ProductPage';
-import puma from '../Assets/puma.jpeg';
-import puma1 from '../Assets/puma1.jpeg';
-import puma2 from '../Assets/puma2.jpeg';
-import puma3 from '../Assets/puma3.jpeg';
+import aj from '../Assets/AjDezines.jpeg';
+import Aj1 from '../Assets/Aj1.jpeg';
+import Aj2 from '../Assets/Aj2.jpeg';
+import Aj3 from '../Assets/Aj3.jpeg';
 
-const KidsPuma = () => {
+const KidsAj = () => {
   const product = {
-    id: 10,
-    name: "Kids Smashic Unisex White Sneakers",
-    img: puma,
+    id: 8,
+    name: "Kids Aj Dezines Outfit",
+    img: aj,
     price: "₹2,250"
   };
 
-  const thumbnails = [puma, puma1, puma2, puma3];
+  const thumbnails = [aj, Aj1, Aj2, Aj3];
   const sizes = ['1', '2', '3', '4', '5'];
 
   return (
     <ProductPage
       product={product}
-      mainImage={puma}
+      mainImage={aj}
       thumbnails={thumbnails}
       tag="BestSeller"
-      title="Kids Smashic Unisex White Sneakers"
+      title="Kids Aj Dezines Outfit"
       rating="3.9"
       reviews="Based on 1541 ratings"
       price="₹2,250"
@@ -32,4 +32,4 @@ const KidsPuma = () => {
   );
 };
 
-export default KidsPuma;
+export default KidsAj;

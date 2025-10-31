@@ -207,7 +207,7 @@ const Home = () => {
         <div className="container container-kid">
             <h1>Kid's Collection</h1>
             <div className="row1">
-                <Link to='/mabish' style={{textDecoration:'none'}}><div className="col-4">
+                <Link to='/kidsstylo' style={{textDecoration:'none'}}><div className="col-4">
                     <img src={stylobug} className='img' alt="" />
                     <h4>Stylo Bug</h4>
                     <p>Girls kurta & Pant Yellow
@@ -215,7 +215,7 @@ const Home = () => {
                     <br/>
                     <span>₹1,440 &nbsp; <del>₹3,599</del></span></p>
                 </div></Link>
-                <Link to='/mabish' style={{textDecoration:'none'}}><div className="col-4">
+                <Link to='/kidsaj' style={{textDecoration:'none'}}><div className="col-4">
                     <img className='img' src={aj} alt="" />
                     <h4>AJ Dezines</h4>
                     <p>Foil Printed Sleeveless Kurta
@@ -223,7 +223,7 @@ const Home = () => {
                     <br/>
                     <span>₹1,800 &nbsp; <del>₹3,999</del></span></p>
                 </div></Link>
-                <Link to='/mabish' style={{textDecoration:'none'}}><div className="col-4">
+                <Link to='/kidsbitiya' style={{textDecoration:'none'}}><div className="col-4">
                     <img className='img' src={bitiya} alt="" />
                     <h4>Bitiya By Bhama</h4>
                     <p>Girls Ethnic Yellow Floral Kurta
@@ -231,7 +231,7 @@ const Home = () => {
                     <br/>
                     <span>₹1,350 &nbsp; <del>₹4,499</del></span></p>
                 </div></Link>
-                <Link to='/mabish' style={{textDecoration:'none'}}><div className="col-4">
+                <Link to='/kidskisah' style={{textDecoration:'none'}}><div className="col-4">
                     <img className='img' src={kisah} alt="" />
                     <h4>Kisah</h4>
                     <p>Cream Floral Printed Nehru Jacket

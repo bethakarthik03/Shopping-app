@@ -21,6 +21,11 @@ import WomenMabish from "./components/WomenMabish.jsx";
 import WomenStylum from "./components/WomenStylum.jsx";
 import WomenLibas from "./components/WomenLibas.jsx";
 import WomenChaabra from "./components/WomenChaabra.jsx";
+import KidsAj from "./components/KidsAj.jsx";
+import KidsBitiya from "./components/KidsBitiya.jsx";
+import KidsKisah from "./components/KidsKisah.jsx";
+import KidsStylo from "./components/KidsStylo.jsx";
+
 
 function App() {
   return (
@@ -46,6 +51,10 @@ function App() {
                 <Route path="/stylum" element={<WomenStylum />}/>
                 <Route path="/libas" element={<WomenLibas />}/>
                 <Route path="/chaabra" element={<WomenChaabra />}/>
+                <Route path="/kidsaj" element={<KidsAj />}/>
+                <Route path="/kidsbitiya" element={<KidsBitiya />}/>
+                <Route path="/kidskisah" element={<KidsKisah />}/>
+                <Route path="/kidsstylo" element={<KidsStylo />}/>
               </Routes>
             </Router>
           </CartlistProvider>
