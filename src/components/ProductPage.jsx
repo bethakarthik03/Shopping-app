@@ -51,10 +51,10 @@ const ProductPage = ({
   return (
     <div>
       <div className="navbar">
-        <div className="logo">
-          <img src={logo} alt="logo" />
-        </div>
-        <nav>
+        <div className="nav-left">
+          <div className="logo">
+            <img src={logo} alt="logo" />
+          </div>
           <button
             className="hamburger-button"
             onClick={() => setMenuOpen(!menuOpen)}
@@ -62,16 +62,11 @@ const ProductPage = ({
           >
             {menuOpen ? <FaTimes /> : <FaBars />}
           </button>
+        </div>
+        <nav>
           <div className={`side-menu ${menuOpen ? 'open' : ''}`}>
-            <div
-              className="menu-item"
-              onClick={() => {
-                navigate('/home');
-                setMenuOpen(false);
-              }}
-            >
-              Home
-            </div>
+            <div className="menu-item" onClick={() => { navigate('/home'); setMenuOpen(false); }}>Home</div>
+            
           </div>
           {menuOpen && <div className="overlay" onClick={() => setMenuOpen(false)}></div>}
         </nav>

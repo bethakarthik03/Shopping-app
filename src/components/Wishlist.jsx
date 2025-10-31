@@ -11,6 +11,7 @@ const Wishlist = () =>{
   const { isAuthenticated, login, logout } = useAuth();
   const { wishlistItems, removeFromWishlist } = useWishlist();
   const { cartlistItems, addToCartlist } = useCartlist();
+  
    const [menuOpen, setMenuOpen] = useState(false);
    const handleLogout = () => {
     logout();
@@ -25,24 +26,32 @@ const Wishlist = () =>{
    const cartlistCount = cartlistItems.length;
     return(
         <div>
-            <div className="navbar" >  
-                        <div className="logo">
-                            <img src={logo} alt="logo" />
-                         </div> 
-                        <nav >
+            <div className="navbar" >
+                        <div className="nav-left">
+                            <div className="logo">
+                                <img src={logo} alt="logo" />
+                             </div>
                             <button className="hamburger-button" onClick={() => setMenuOpen(!menuOpen)} >
                         {menuOpen ? <FaTimes /> : <FaBars />}
                       </button>
+                        </div>
+                        <nav >
                         <div className={`side-menu ${menuOpen ? 'open' : ''}`}>
-                            <div className="menu-item" onClick={() => { 
-                        navigate("/home"); 
-                        setMenuOpen(false); 
-                    }}
-                    >
-                    Home
-                        
+                        <div className="menu-item" onClick={() => { navigate('/home'); setMenuOpen(false); }}>Home</div>
+                        <div className="nav-buttons">
+                            {isAuthenticated ? (
+                                <>
+                                    <div className='menu-item' onClick={handleLogout} >Logout</div>
+                                </>
+                            ):(
+                                <>
+                                    <button onClick={handleLogin} className="login-btn">Login</button>
+                                    <button onClick={() => navigate("/signup")} className="signup-btn">SignUp</button>
+                                </>
+                            )}
+                        </div>
                     </div>
-                      </div>
+            
                       {menuOpen && <div className="overlay" onClick={() => setMenuOpen(false)}></div>}
                         </nav>
                         <div className="nav-search">
@@ -51,8 +60,6 @@ const Wishlist = () =>{
                         </div>
                         
                         <div className="nav-buttons">
-                        {isAuthenticated ? (
-                        <>
                             <div className="icon-btn" onClick={() => navigate("/wishlist")}>
                             <FaHeart className="icon" />
                             <span className="badge">{wishlistCount}</span>
@@ -60,15 +67,7 @@ const Wishlist = () =>{
                             <div className="icon-btn" onClick={() => navigate("/cart")}>
                             <FaShoppingBag className="icon" />
                             <span className="badge">{cartlistCount}</span>
-                            </div>
-                            <button onClick={handleLogout} className="logout-btn">Logout</button>
-                        </>
-                        ) : (
-                        <>
-                            <button onClick={handleLogin} className="login-btn">Login</button>
-                            <button onClick={() => navigate("/signup")} className="signup-btn">SignUp</button>
-                        </>
-                    )}
+                        </div>
                     </div>
             </div>
             

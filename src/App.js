@@ -33,6 +33,7 @@ import ShoesCampus from "./components/ShoesCampus.jsx";
 import ShoesPuma from "./components/ShoesPuma.jsx";
 import ShoesRedTape from "./components/ShoesRedTape.jsx";
 import ShoesReebok from "./components/ShoesReebok.jsx";
+import Checkout from "./components/Checkout.jsx";
 
 
 function App() {
@@ -71,6 +72,7 @@ function App() {
                 <Route path="/shoespuma" element={<ShoesPuma />}/>
                 <Route path="/shoesredtape" element={<ShoesRedTape />}/>
                 <Route path="/shoesreebok" element={<ShoesReebok />}/>
+                <Route path="/checkout" element={<Checkout />} />
               </Routes>
             </Router>
           </CartlistProvider>
