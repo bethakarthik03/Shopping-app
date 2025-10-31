@@ -17,7 +17,7 @@ const ProductPage = ({
   reviews,
   price,
   discount,
-  sizes
+  sizes = []
 }) => {
   const navigate = useNavigate();
   const { isAuthenticated, login, logout } = useAuth();
@@ -26,9 +26,15 @@ const ProductPage = ({
   const wishlistCount = wishlistItems.length;
   const cartlistCount = cartlistItems.length;
   const [menuOpen, setMenuOpen] = useState(false);
+  const [selectedSize, setSelectedSize] = useState(null);
 
   const handleAddToWishlist = () => {
-    addToWishlist(product);
+    if (sizes.length > 0 && !selectedSize) {
+      alert('Please select a size before adding to wishlist.');
+      return;
+    }
+    const itemWithSize = sizes.length > 0 ? { ...product, selectedSize } : product;
+    addToWishlist(itemWithSize);
     navigate('/wishlist');
   };
 
@@ -122,17 +128,32 @@ const ProductPage = ({
             <span className="price">{price}</span> &nbsp; &nbsp;
             <span className="discount">{discount}</span>
           </div>
-          <div className="size-section">
-            <h4>Select Size</h4>
-            {sizes.map((size, index) => (
-              <button key={index}>{size}</button>
-            ))}
-          </div>
+          {sizes.length > 0 && (
+            <div className="size-section">
+              <h4>Select Size</h4>
+              {sizes.map((size, index) => (
+                <button
+                  key={index}
+                  className={selectedSize === size ? 'selected' : ''}
+                  onClick={() => setSelectedSize(size)}
+                >
+                  {size}
+                </button>
+              ))}
+            </div>
+          )}
           <div className="action-buttons">
             <button className="wishlist-btn" onClick={handleAddToWishlist}>
               ♡ Add to Wishlist
             </button>
-            <button className="bag-btn" onClick={() => addToCartlist(product)}>
+            <button className="bag-btn" onClick={() => {
+              if (sizes.length > 0 && !selectedSize) {
+                alert('Please select a size before adding to cart.');
+                return;
+              }
+              const itemWithSize = sizes.length > 0 ? { ...product, selectedSize } : product;
+              addToCartlist(itemWithSize);
+            }}>
               Add to Bag
             </button>
           </div>

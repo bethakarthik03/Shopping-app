@@ -25,6 +25,14 @@ import KidsAj from "./components/KidsAj.jsx";
 import KidsBitiya from "./components/KidsBitiya.jsx";
 import KidsKisah from "./components/KidsKisah.jsx";
 import KidsStylo from "./components/KidsStylo.jsx";
+import BagsStyli from "./components/BagsStyli.jsx";
+import BagsTommy from "./components/BagsTommy.jsx";
+import BagsZouk from "./components/BagsZouk.jsx";
+import BagsMouchi from "./components/BagsMouchi.jsx";
+import ShoesCampus from "./components/ShoesCampus.jsx";
+import ShoesPuma from "./components/ShoesPuma.jsx";
+import ShoesRedTape from "./components/ShoesRedTape.jsx";
+import ShoesReebok from "./components/ShoesReebok.jsx";
 
 
 function App() {
@@ -55,6 +63,14 @@ function App() {
                 <Route path="/kidsbitiya" element={<KidsBitiya />}/>
                 <Route path="/kidskisah" element={<KidsKisah />}/>
                 <Route path="/kidsstylo" element={<KidsStylo />}/>
+                <Route path="/bagsstyli" element={<BagsStyli />}/>
+                <Route path="/bagstommy" element={<BagsTommy />}/>
+                <Route path="/bagszouk" element={<BagsZouk />}/>
+                <Route path="/bagsmouchi" element={<BagsMouchi />}/>
+                <Route path="/shoescampus" element={<ShoesCampus />}/>
+                <Route path="/shoespuma" element={<ShoesPuma />}/>
+                <Route path="/shoesredtape" element={<ShoesRedTape />}/>
+                <Route path="/shoesreebok" element={<ShoesReebok />}/>
               </Routes>
             </Router>
           </CartlistProvider>

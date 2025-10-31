@@ -10,7 +10,7 @@ const Wishlist = () =>{
     const navigate = useNavigate();
   const { isAuthenticated, login, logout } = useAuth();
   const { wishlistItems, removeFromWishlist } = useWishlist();
-  const { cartlistItems } = useCartlist();
+  const { cartlistItems, addToCartlist } = useCartlist();
    const [menuOpen, setMenuOpen] = useState(false);
    const handleLogout = () => {
     logout();
@@ -76,10 +76,11 @@ const Wishlist = () =>{
                 <h2>Your WishList</h2>
                 <div className="wishlist-items">
                    {wishlistItems.map(item=>(
-                    <div className="wishlist-card" key={item.id}>
+                    <div className="wishlist-card" key={`${item.id}-${item.selectedSize}`}>
                         <img src={item.img} alt="{item.name}" />
                         <h3>{item.name}</h3>
-                        <button className="move-to-cart">Move to Cart</button>
+                        <p>Size: {item.selectedSize}</p>
+                        <button className="move-to-cart" onClick={() => { addToCartlist(item); removeFromWishlist(item.id); navigate("/cart"); }}>Move to Cart</button>
                         <button className="remove-from-wishlist" onClick={() => removeFromWishlist(item.id)}>Remove</button>
                     </div>
                    ))}

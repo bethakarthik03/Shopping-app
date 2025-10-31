@@ -12,10 +12,8 @@ const Campus = () => {
     img: campus,
     price: "₹1,235"
   };
-
   const thumbnails = [campus, campus1, campus2, campus3];
   const sizes = ['30', '32', '34', '36', '38'];
-
   return (
     <ProductPage
       product={product}

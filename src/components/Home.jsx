@@ -25,6 +25,14 @@ import stylobug from '../Assets/Stylobug.jpeg'
 import aj from '../Assets/AjDezines.jpeg'
 import bitiya from '../Assets/bitiyabhama.jpeg'
 import kisah from '../Assets/Kisah.jpeg'
+import bagsstyli from '../Assets/bagsstyli.jpeg'
+import bagstommy from '../Assets/bagstommy.jpeg'
+import bagszouk from '../Assets/bagszouk.jpeg'
+import bagsmouchi from '../Assets/bagsmouchi.jpeg'
+import shoescampus from '../Assets/shoescampus.jpeg'
+import shoespuma from '../Assets/shoespuma.jpeg'
+import shoesredtape from '../Assets/shoesredtape.jpeg'
+import shoesreebok from '../Assets/shoesreebok.jpeg'
 import { useWishlist } from './WishlistContext';
 import { useCartlist } from './CartlistContext';
 const Home = () => {
@@ -66,6 +74,8 @@ const Home = () => {
             <div className="menu-item" onClick={() => { scrollToSection('mens-section'); setMenuOpen(false); }}>Men</div>
             <div className="menu-item" onClick={() => { scrollToSection('women-section'); setMenuOpen(false); }}>Women</div>
             <div className="menu-item" onClick={() => { scrollToSection('kids-section'); setMenuOpen(false); }}>Kids</div>
+            <div className="menu-item" onClick={() => { scrollToSection('bags-section'); setMenuOpen(false); }}>Bags</div>
+            <div className="menu-item" onClick={() => { scrollToSection('shoes-section'); setMenuOpen(false); }}>Shoes</div>
           </div>
           {menuOpen && <div className="overlay" onClick={() => setMenuOpen(false)}></div>}
             </nav>
@@ -242,9 +252,87 @@ const Home = () => {
             </div>
         </div>
         </section>
+        <section id='bags-section' className='bags-section'>
+        <div className="container container-bag">
+            <h1>Bag's Collection</h1>
+            <div className="row1">
+                <Link to='/bagsstyli' style={{textDecoration:'none'}}><div className="col-4">
+                    <img src={bagsstyli} className='img' alt="" />
+                    <h4>Styli Bag</h4>
+                    <p>Mk Print Flap Handbag with Turn Lock Closure
+                    <br/>
+                    <br/>
+                    <span>₹1,332 &nbsp; <del>₹2,049</del></span></p>
+                </div></Link>
+                <Link to='/bagstommy' style={{textDecoration:'none'}}><div className="col-4">
+                    <img className='img' src={bagstommy} alt="" />
+                    <h4>Tommy Hilfiger</h4>
+                    <p>Solid Navy Pu Handbag
+                    <br/>
+                    <br/>
+                    <span>₹4,200 &nbsp; <del>₹5,999</del></span></p>
+                </div></Link>
+                <Link to='/bagszouk' style={{textDecoration:'none'}}><div className="col-4">
+                    <img className='img' src={bagszouk} alt="" />
+                    <h4>Zouk</h4>
+                    <p>Office Bag - Jet Black
+                    <br/>
+                    <br/>
+                    <span>₹4,000 &nbsp; <del>11,420</del></span></p>
+                </div></Link>
+                <Link to='/bagsmouchi' style={{textDecoration:'none'}}><div className="col-4">
+                    <img className='img' src={bagsmouchi} alt="" />
+                    <h4>Mochi</h4>
+                    <p>Women Brown Casual Leather Solid Shoulder Bag
+                    <br/>
+                    <br/>
+                    <span>₹3,894 &nbsp; <del>₹6,490</del></span></p>
+                </div></Link>
+            </div>
+        </div>
+        </section>
+        <section id='shoes-section' className='shoes-section'>
+        <div className="container container-shoe">
+            <h1>Shoe's Collection</h1>
+            <div className="row1">
+                <Link to='/shoescampus' style={{textDecoration:'none'}}><div className="col-4">
+                    <img src={shoescampus} className='img' alt="" />
+                    <h4>Campus Shoes</h4>
+                    <p>Comfortable and stylish campus shoes
+                    <br/>
+                    <br/>
+                    <span>₹1,500 &nbsp; <del>₹2,000</del></span></p>
+                </div></Link>
+                <Link to='/shoespuma' style={{textDecoration:'none'}}><div className="col-4">
+                    <img className='img' src={shoespuma} alt="" />
+                    <h4>Puma Shoes</h4>
+                    <p>High-quality Puma sneakers
+                    <br/>
+                    <br/>
+                    <span>₹2,500 &nbsp; <del>₹3,500</del></span></p>
+                </div></Link>
+                <Link to='/shoesredtape' style={{textDecoration:'none'}}><div className="col-4">
+                    <img className='img' src={shoesredtape} alt="" />
+                    <h4>Red Tape Shoes</h4>
+                    <p>Classic Red Tape formal shoes
+                    <br/>
+                    <br/>
+                    <span>₹1,800 &nbsp; <del>₹2,500</del></span></p>
+                </div></Link>
+                <Link to='/shoesreebok' style={{textDecoration:'none'}}><div className="col-4">
+                    <img className='img' src={shoesreebok} alt="" />
+                    <h4>Reebok Shoes</h4>
+                    <p>Performance Reebok running shoes
+                    <br/>
+                    <br/>
+                    <span>₹2,200 &nbsp; <del>₹3,000</del></span></p>
+                </div></Link>
+            </div>
+        </div>
+        </section>
     </div>
-    
-    
+
+
   )
 }
 

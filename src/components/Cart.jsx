@@ -76,11 +76,12 @@ const Cart = () => {
 
       <div className="cart-items">
         {cartlistItems.map(item => (
-          <div className="cart-card" key={item.id}>
+          <div className="cart-card" key={`${item.id}-${item.selectedSize}`}>
             <img src={item.img} alt={item.name} />
 
             <div className="cart-details">
               <h3>{item.name}</h3>
+              <p>Size: {item.selectedSize}</p>
               <div className="quantity-control">
                 <button className="quantity-btn">-</button>
                 <span>1</span>

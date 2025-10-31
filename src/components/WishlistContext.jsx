@@ -7,7 +7,7 @@ export const WishlistProvider = ({ children }) => {
 
   const addToWishlist = (item) => {
     setWishlistItems((prev) => {
-      if (!prev.find((i) => i.id === item.id)) {
+      if (!prev.find((i) => i.id === item.id && i.selectedSize === item.selectedSize)) {
         return [...prev, item];
       }
       return prev;
