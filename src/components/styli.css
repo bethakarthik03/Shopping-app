@@ -233,10 +233,18 @@
   background: #fff;
   cursor: pointer;
   font-weight: 600;
+  transition: all 0.3s ease;
 }
 
 .size-section button:hover {
   border-color: #000;
+  background-color: #f0f0f0;
+}
+
+.size-section button.selected {
+  background-color: #0077b6;
+  color: #fff;
+  border-color: #0077b6;
 }
 .action-buttons {
   display: flex;
