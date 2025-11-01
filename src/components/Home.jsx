@@ -73,21 +73,22 @@ const Home = () => {
             </div>
             <nav >
             <div className={`side-menu ${menuOpen ? 'open' : ''}`}>
-            <div className="menu-item" onClick={() => { scrollToSection('mens-section'); setMenuOpen(false); }}>Men</div>
-            <div className="menu-item" onClick={() => { scrollToSection('women-section'); setMenuOpen(false); }}>Women</div>
-            <div className="menu-item" onClick={() => { scrollToSection('kids-section'); setMenuOpen(false); }}>Kids</div>
-            <div className="menu-item" onClick={() => { scrollToSection('bags-section'); setMenuOpen(false); }}>Bags</div>
+            <div className="menu-item" onClick={() => { scrollToSection('mens-section'); setMenuOpen(false); }} style={{textAlign:'center'}}>Men</div>
+            <div className="menu-item" onClick={() => { scrollToSection('women-section'); setMenuOpen(false); }} style={{textAlign:'center'}}>Women</div>
+            <div className="menu-item" onClick={() => { scrollToSection('kids-section'); setMenuOpen(false); }} style={{textAlign:'center'}}>Kids</div>
+            <div className="menu-item" onClick={() => { scrollToSection('bags-section'); setMenuOpen(false); }} style={{textAlign:'center'}}>Bags</div>
             
-            <div className="menu-item" onClick={() => { scrollToSection('shoes-section'); setMenuOpen(false); }}>Shoes</div>
+            <div className="menu-item" onClick={() => { scrollToSection('shoes-section'); setMenuOpen(false); }} style={{textAlign:'center'}}>Shoes</div>
             <div className="nav-buttons">
                 {isAuthenticated ? (
                     <>
-                        <div className='menu-item' onClick={handleLogout} >Logout</div>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <div className="menu-item" onClick={handleLogout} >Logout</div>
                     </>
                 ):(
                     <>
-                        <button onClick={handleLogin} className="login-btn">Login</button>
-                        <button onClick={() => navigate("/signup")} className="signup-btn">SignUp</button>
+                        <button onClick={handleLogin} className="login-btn" >Login</button>
+                        <button onClick={() => navigate("/signup")} className="signup-btn"  >SignUp</button>
                     </>
                 )}
             </div>

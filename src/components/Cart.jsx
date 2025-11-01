@@ -63,11 +63,11 @@ const Cart = () => {
                   </div>
                   <nav >
                   <div className={`side-menu ${menuOpen ? 'open' : ''}`}>
-                  <div className="menu-item" onClick={() => { navigate('/home'); setMenuOpen(false); }}>Home</div>
+                  <div className="menu-item" onClick={() => { navigate('/home'); setMenuOpen(false); }} style={{textAlign:'center'}}>Home</div>
                   <div className="nav-buttons">
                       {isAuthenticated ? (
                           <>
-                              <div className='menu-item' onClick={handleLogout} >Logout</div>
+                              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<div className='menu-item' onClick={handleLogout} >Logout</div>
                           </>
                       ):(
                           <>

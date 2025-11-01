@@ -46,6 +46,38 @@
 }
 
 /* Responsive Design */
+@media (max-width: 480px) {
+  .addUser {
+    width: 95%;
+    margin: 30px auto;
+    padding: 20px;
+    border-radius: 8px;
+  }
+  .addUserForm label {
+    font-size: 14px;
+    margin-top: 15px;
+  }
+  .addUserForm input {
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 6px;
+    margin-top: 8px;
+  }
+  .addUserForm button {
+    margin-top: 20px;
+    padding: 14px;
+    font-size: 16px;
+    border-radius: 8px;
+  }
+  .error {
+    font-size: 12px;
+    margin-top: 5px;
+  }
+  .login {
+    margin-top: 15px;
+  }
+}
+
 @media (max-width: 768px) {
   .addUser {
     width: 90%;

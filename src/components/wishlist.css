@@ -64,6 +64,41 @@
 }
 
 /* Responsive Design */
+@media (max-width: 480px) {
+  .wishlist-container {
+    width: 95%;
+    padding: 10px;
+    margin: 10px auto;
+  }
+  .wishlist-container h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+  .wishlist-items {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 10px;
+  }
+  .wishlist-card {
+    padding: 8px;
+    border-radius: 8px;
+  }
+  .wishlist-card img {
+    height: 120px;
+    border-radius: 6px;
+  }
+  .wishlist-card h3 {
+    font-size: 14px;
+    margin: 6px 0;
+    line-height: 1.2;
+  }
+  .wishlist-card button {
+    padding: 6px 10px;
+    font-size: 12px;
+    margin: 2px;
+    border-radius: 4px;
+  }
+}
+
 @media (max-width: 768px) {
   .wishlist-container {
     width: 95%;

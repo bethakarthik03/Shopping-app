@@ -111,6 +111,52 @@
 }
 
 /* Responsive Design */
+@media (max-width: 480px) {
+  .addUser {
+    width: 95%;
+    margin: 40px auto;
+    padding: 20px;
+    border-radius: 8px;
+  }
+  .addUserForm .inputGroup input {
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 6px;
+  }
+  .addUserForm .inputGroup label {
+    font-size: 14px;
+    margin-top: 15px;
+  }
+  .btn-primary, .btn-success {
+    padding: 14px;
+    font-size: 16px;
+    margin-top: 20px;
+    border-radius: 8px;
+  }
+  .btn-success {
+    margin-top: 25px;
+  }
+  .forgot-password {
+    font-size: 12px;
+    margin-top: 20px;
+    flex-direction: column;
+    gap: 5px;
+  }
+  .addUser h3 {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  .login {
+    gap: 10px;
+  }
+  .login .btn-primary {
+    margin-top: 10px;
+  }
+  .login .btn-success {
+    margin-top: 20px;
+  }
+}
+
 @media (max-width: 768px) {
   .addUser {
     width: 90%;

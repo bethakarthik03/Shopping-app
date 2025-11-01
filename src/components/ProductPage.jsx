@@ -65,8 +65,19 @@ const ProductPage = ({
         </div>
         <nav>
           <div className={`side-menu ${menuOpen ? 'open' : ''}`}>
-            <div className="menu-item" onClick={() => { navigate('/home'); setMenuOpen(false); }}>Home</div>
-            
+            <div className="menu-item" onClick={() => { navigate('/home'); setMenuOpen(false); }} style={{textAlign:'center'}}>Home</div>
+            <div className="nav-buttons">
+              {isAuthenticated ? (
+                <>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<div className='menu-item' onClick={handleLogout} >Logout</div>
+                </>
+              ):(
+                <>
+                  <button onClick={handleLogin} className="login-btn">Login</button>
+                  <button onClick={() => navigate("/signup")} className="signup-btn">SignUp</button>
+                </>
+              )}
+              </div>
           </div>
           {menuOpen && <div className="overlay" onClick={() => setMenuOpen(false)}></div>}
         </nav>
@@ -75,30 +86,14 @@ const ProductPage = ({
           <FaSearch className="search-icon" />
         </div>
         <div className="nav-buttons">
-          {isAuthenticated ? (
-            <>
-              <div className="icon-btn" onClick={() => navigate('/wishlist')}>
-                <FaHeart className="icon" />
-                <span className="badge">{wishlistCount}</span>
-              </div>
-              <div className="icon-btn" onClick={() => navigate('/cart')}>
-                <FaShoppingBag className="icon" />
-                <span className="badge">{cartlistCount}</span>
-              </div>
-              <button onClick={handleLogout} className="logout-btn">
-                Logout
-              </button>
-            </>
-          ) : (
-            <>
-              <button onClick={handleLogin} className="login-btn">
-                Login
-              </button>
-              <button onClick={() => navigate('/signup')} className="signup-btn">
-                SignUp
-              </button>
-            </>
-          )}
+          <div className="icon-btn" onClick={() => navigate('/wishlist')}>
+            <FaHeart className="icon" />
+            <span className="badge">{wishlistCount}</span>
+          </div>
+          <div className="icon-btn" onClick={() => navigate('/cart')}>
+            <FaShoppingBag className="icon" />
+            <span className="badge">{cartlistCount}</span>
+          </div>
         </div>
       </div>
       <div className="product-container">
