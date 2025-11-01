@@ -35,6 +35,7 @@ import shoesredtape from '../Assets/shoesredtape.jpeg'
 import shoesreebok from '../Assets/shoesreebok.jpeg'
 import { useWishlist } from './WishlistContext';
 import { useCartlist } from './CartlistContext';
+import Footer from './Footer';
 const Home = () => {
   const navigate = useNavigate();
   const { isAuthenticated, login, logout } = useAuth();
@@ -337,6 +338,7 @@ const Home = () => {
             </div>
         </div>
         </section>
+        <Footer scrollToSection={scrollToSection} />
     </div>
 
 

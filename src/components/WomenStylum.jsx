@@ -29,7 +29,10 @@ const WomenStylum = () => {
       discount="65% Off"
       sizes={sizes}
     />
+   
   );
+  
+  
 };
 
 export default WomenStylum;
