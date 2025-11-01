@@ -10,7 +10,7 @@ const WomenStylum = () => {
     id: 3,
     name: "Women Slim Fit Multi Striped Full Sleeves Cutaway Collar Casual Shirt - White",
     img: stylum,
-    price: "₹613"
+    price: "₹1,334"
   };
 
   const thumbnails = [stylum, stylum1, stylum2, stylum3];
@@ -25,7 +25,7 @@ const WomenStylum = () => {
       title="Women Slim Fit Multi Striped Full Sleeves Cutaway Collar Casual Shirt - White"
       rating="3.8"
       reviews="Based on 63 ratings"
-      price="₹613"
+      price="₹1,334"
       discount="65% Off"
       sizes={sizes}
     />

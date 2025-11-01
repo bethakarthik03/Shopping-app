@@ -26,7 +26,7 @@ const BagsMouchi = () => {
       rating="4.2"
       reviews="Based on 200 ratings"
       price="₹3,894"
-      discount="40% Off"
+      discount="50% Off"
       sizes={sizes}
     />
   );

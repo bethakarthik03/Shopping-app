@@ -10,7 +10,7 @@ const WomenChaabra = () => {
     id: 8,
     name: "Women Chaabra Dress",
     img: chaabra,
-    price: "₹1,235"
+    price: "₹3,920"
   };
 
   const thumbnails = [chaabra, chaabra1, chaabra2, chaabra3];
@@ -25,8 +25,8 @@ const WomenChaabra = () => {
       title="Women Chaabra Dress"
       rating="3.4"
       reviews="Based on 25 ratings"
-      price="₹1,235"
-      discount="35% Off"
+      price="₹3,920"
+      discount="75% Off"
       sizes={sizes}
     />
   );

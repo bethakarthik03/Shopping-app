@@ -10,7 +10,7 @@ const KidsBitiya = () => {
     id: 10,
     name: "Kids Bitiya Bhama Outfit",
     img: bitiya,
-    price: "₹613"
+    price: "₹1,350"
   };
 
   const thumbnails = [bitiya, bitiya1, bitiya2, bitiya3];
@@ -25,7 +25,7 @@ const KidsBitiya = () => {
       title="Kids Bitiya Bhama Outfit"
       rating="3.8"
       reviews="Based on 63 ratings"
-      price="₹613"
+      price="₹1,350"
       discount="65% Off"
       sizes={sizes}
     />

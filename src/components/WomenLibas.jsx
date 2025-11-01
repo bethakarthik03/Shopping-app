@@ -10,7 +10,7 @@ const WomenLibas = () => {
     id: 5,
     name: "Women Libas Dress",
     img: libas,
-    price: "₹613"
+    price: "₹4,880"
   };
 
   const thumbnails = [libas, libas1, libas2, libas3];
@@ -25,7 +25,7 @@ const WomenLibas = () => {
       title="Women Libas Dress"
       rating="3.8"
       reviews="Based on 63 ratings"
-      price="₹613"
+      price="₹4,880"
       discount="65% Off"
       sizes={sizes}
     />

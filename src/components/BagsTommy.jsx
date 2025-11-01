@@ -10,7 +10,7 @@ const BagsTommy = () => {
     id: 11,
     name: "Tommy Bag",
     img: tommy,
-    price: "₹2,200"
+    price: "₹4,200"
   };
 
   const thumbnails = [tommy, tommy1, tommy2, tommy3];
@@ -25,7 +25,7 @@ const BagsTommy = () => {
       title="Tommy Bag"
       rating="4.1"
       reviews="Based on 180 ratings"
-      price="₹2,200"
+      price="₹4,200"
       discount="25% Off"
       sizes={sizes}
     />

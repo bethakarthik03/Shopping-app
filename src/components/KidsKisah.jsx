@@ -10,7 +10,7 @@ const KidsKisah = () => {
     id: 11,
     name: "Kids Kisah Outfit",
     img: kisah,
-    price: "₹1,235"
+    price: "₹1,499"
   };
 
   const thumbnails = [kisah, kisah1, kisah2, kisah3];
@@ -25,7 +25,7 @@ const KidsKisah = () => {
       title="Kids Kisah Outfit"
       rating="3.4"
       reviews="Based on 25 ratings"
-      price="₹1,235"
+      price="₹1,499"
       discount="35% Off"
       sizes={sizes}
     />

@@ -10,7 +10,7 @@ const Puma = () => {
     id: 2,
     name: "Smashic Unisex White Sneakers",
     img: puma,
-    price: "₹2,250"
+    price: "₹1,800"
   };
 
   const thumbnails = [puma, puma1, puma2, puma3];
@@ -25,7 +25,7 @@ const Puma = () => {
       title="Smashic Unisex White Sneakers"
       rating="3.9"
       reviews="Based on 1541 ratings"
-      price="₹2,250"
+      price="₹1,800"
       discount="50% Off"
       sizes={sizes}
     />

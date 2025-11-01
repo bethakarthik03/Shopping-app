@@ -10,7 +10,7 @@ const KidsStylo = () => {
     id: 9,
     name: "Kids Stylo Outfit",
     img: stylo,
-    price: "₹1,235"
+    price: "₹1,440"
   };
 
   const thumbnails = [stylo, stylo1, stylo2, stylo3];
@@ -25,8 +25,8 @@ const KidsStylo = () => {
       title="Kids Stylo Outfit"
       rating="3.4"
       reviews="Based on 25 ratings"
-      price="₹1,235"
-      discount="35% Off"
+      price="₹1,440"
+      discount="55% Off"
       sizes={sizes}
     />
   );

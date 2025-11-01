@@ -10,7 +10,7 @@ const Garage = () => {
     id: 6,
     name: "Men Garage Shirt",
     img: garage,
-    price: "₹613"
+    price: "₹753"
   };
 
   const thumbnails = [garage, garage1, garage2, garage3];
@@ -25,7 +25,7 @@ const Garage = () => {
       title="Men Garage Shirt"
       rating="3.8"
       reviews="Based on 63 ratings"
-      price="₹613"
+      price="₹753"
       discount="65% Off"
       sizes={sizes}
     />

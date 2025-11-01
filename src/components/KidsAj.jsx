@@ -10,7 +10,7 @@ const KidsAj = () => {
     id: 8,
     name: "Kids Aj Dezines Outfit",
     img: aj,
-    price: "₹2,250"
+    price: "₹1,800"
   };
 
   const thumbnails = [aj, Aj1, Aj2, Aj3];
@@ -25,7 +25,7 @@ const KidsAj = () => {
       title="Kids Aj Dezines Outfit"
       rating="3.9"
       reviews="Based on 1541 ratings"
-      price="₹2,250"
+      price="₹1,800"
       discount="50% Off"
       sizes={sizes}
     />
